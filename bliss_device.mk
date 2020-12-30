@@ -22,3 +22,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural;com.google.android.systemui.gxoverlay
 
+# For Google Camera
+PRODUCT_COPY_FILES += \
+    device/google/raviole/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
