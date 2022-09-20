@@ -16,9 +16,11 @@
 
 $(call inherit-product, device/google/gs101/aosp_common.mk)
 $(call inherit-product, device/google/raviole/device-oriole.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_oriole
+
+PRODUCT_NAME := bliss_oriole
 PRODUCT_DEVICE := oriole
-PRODUCT_MODEL := AOSP on Oriole
-PRODUCT_BRAND := Android
+PRODUCT_MODEL := Pixel 6
+PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
