@@ -16,6 +16,7 @@
 
 $(call inherit-product, device/google/gs101/aosp_common.mk)
 $(call inherit-product, device/google/raviole/device-oriole.mk)
+$(call inherit-product, device/google/raviole/bliss_device.mk)
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 
