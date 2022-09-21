@@ -25,6 +25,8 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/orio
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/oriole/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersOriole.mk)
 
+include device/google/raviole/device_common.mk
+
 GOODIX_CONFIG_BUILD_VERSION := g6_trusty
 DEVICE_PACKAGE_OVERLAYS += \
 	device/google/raviole/oriole/overlay \
