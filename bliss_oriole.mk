@@ -16,15 +16,20 @@
 
 $(call inherit-product, device/google/gs101/aosp_common.mk)
 $(call inherit-product, device/google/raviole/device-oriole.mk)
-$(call inherit-product, device/google/raviole/bliss_device.mk)
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
-
-
+include device/google/raviole/bliss_device.mk
+include vendor/bliss/config/common_full_phone.mk
+#$(call inherit-product-if-exists, vendor/gms/gms_full.mk)
+#$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+include vendor/gms/products/gms.mk
+include vendor/gms/products/board.mk
+include vendor/gms/common/common-vendor.mk
+	
 PRODUCT_NAME := bliss_oriole
 PRODUCT_DEVICE := oriole
 PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
+WITH_GMS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=oriole \
@@ -37,6 +42,9 @@ PRODUCT_OVERRIDE_GMS_FINGERPRINT := google/oriole/oriole:13/TP1A.220905.004/8927
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 BLISS_BUILDTYPE := OFFICIAL
+BLISS_BUILD_VARIANT := gapps
+
+PRODUCT_BUILD_PVMFW_IMAGE := true
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080

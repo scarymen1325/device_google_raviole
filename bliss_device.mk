@@ -13,10 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Add-ons packages
+PRODUCT_PACKAGES += \
+    tune2fs.recovery \
+    ONSOverlay \
+    NFCOverlay \
+    RemovePackages \
+    BlissSettings \
+    OrioleFrameworks \
+    OrioleSystemUI \
+    SettingsLibOriole \
+    EuiccGoogle \
+    GoogleCamera
 
-# Bliss overlays
-DEVICE_PACKAGE_OVERLAYS += \
-	device/google/raviole/overlay_bliss
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bliss.maintainer=ScaryMen1325
+    ro.processor.model=Google_Tensor
+
+# Disable Rescue Party
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.sys.disable_rescue=true \
+#    persist.device_config.configuration.disable_rescue_party=true
 
 # Use gestures by default
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,3 +48,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
     device/google/raviole/permissions/permissions_com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/permissions_com.google.android.euicc.xml \
     device/google/raviole/permissions/permissions_com.google.euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/permissions_com.google.euiccpixel.xml
+
+USE_ANDROID_INFO := true
+
+# Build
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true

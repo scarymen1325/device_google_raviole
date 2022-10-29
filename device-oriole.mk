@@ -26,10 +26,6 @@ $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/oriole/de
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersOriole.mk)
 
 GOODIX_CONFIG_BUILD_VERSION := g6_trusty
-DEVICE_PACKAGE_OVERLAYS += \
-	device/google/raviole/oriole/overlay \
-	device/google/raviole/overlay_common \
-	device/google/raviole/overlay_bliss
 
 include device/google/raviole/audio/oriole/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
