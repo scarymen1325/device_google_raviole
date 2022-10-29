@@ -15,28 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_oriole.mk \
-    $(LOCAL_DIR)/aosp_oriole_hwasan.mk \
-    $(LOCAL_DIR)/aosp_oriole_pkvm.mk \
-    $(LOCAL_DIR)/aosp_oriole_64.mk \
-    $(LOCAL_DIR)/factory_oriole.mk \
-    $(LOCAL_DIR)/aosp_raven.mk \
-    $(LOCAL_DIR)/aosp_raven_hwasan.mk \
-    $(LOCAL_DIR)/aosp_raven_pkvm.mk \
-    $(LOCAL_DIR)/aosp_raven_64.mk \
-    $(LOCAL_DIR)/factory_raven.mk \
-    $(LOCAL_DIR)/aosp_slider.mk \
-    $(LOCAL_DIR)/aosp_slider_hwasan.mk \
-    $(LOCAL_DIR)/factory_slider.mk \
-    $(LOCAL_DIR)/full_slider.mk \
-    $(LOCAL_DIR)/aosp_whitefin.mk \
-    $(LOCAL_DIR)/aosp_whitefin_pkvm.mk \
-    $(LOCAL_DIR)/aosp_whitefin_hwasan.mk \
-    $(LOCAL_DIR)/aosp_whitefin_64.mk \
-    $(LOCAL_DIR)/factory_whitefin.mk
+    $(LOCAL_DIR)/bliss_oriole.mk 
 
-COMMON_LUNCH_CHOICES := \
-    aosp_slider-userdebug \
-    aosp_whitefin-userdebug \
-    aosp_oriole-userdebug \
-    aosp_raven-userdebug
